@@ -3,10 +3,12 @@ package com.example.udemy.sfg.sfgnetflux.bootstrap;
 import com.example.udemy.sfg.sfgnetflux.domain.Movie;
 import com.example.udemy.sfg.sfgnetflux.repositories.MovieRepository;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 import reactor.core.publisher.Flux;
 
 import java.util.UUID;
 
+@Component
 public class DataLoader implements CommandLineRunner {
 
     private final MovieRepository movieRepository;
