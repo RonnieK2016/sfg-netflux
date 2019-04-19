@@ -24,7 +24,7 @@ public class MovieServiceImpl implements MovieService {
     public Flux<MovieEvent> getEventsByMovieId(String movieId) {
         return Flux.<MovieEvent>generate(movieEventSynchronousSink -> {
             movieEventSynchronousSink.next(new MovieEvent(movieId, new Date()));
-        }).delayElements(Duration.ofSeconds(1L));
+        } ).delayElements(Duration.ofSeconds(1));
     }
 
     @Override
